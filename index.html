@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sorta Systems — Automation for Busy Professionals</title>
+    <meta
+      name="description"
+      content="Stop wasting time on repetitive tasks. Sorta Systems builds automated workflows for busy professionals in the UK. Client intake, scheduling, admin—done."
+    />
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Set Inter as the primary font */
+      html, body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+      html { scroll-behavior: smooth; }
+    </style>
+    <link rel="icon" href="/public/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/public/favicon.png" />
+  </head>
+  <body class="antialiased text-[#2C3E50]">
+    <!-- Header -->
+    <header class="bg-white border-b border-black/5">
+      <div class="mx-auto max-w-7xl px-2 py-0">
+        <div class="flex items-center justify-between">
+          <!-- Logo left -->
+          <a href="#" aria-label="Sorta Systems home" class="group inline-flex items-center gap-3">
+            <img src="/public/logo.svg" alt="Sorta Systems logo" class="h-24 w-24 md:h-32 md:w-32 select-none" />
+            <span class="text-base font-semibold tracking-tight">Sorta Systems</span>
+          </a>
+          <!-- Right: CTA button that scrolls to main section -->
+          <a href="https://forms.gle/o2ocHc5vQdSN6zUu9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-md bg-[#0A74DA] px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-[#085CB0] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0A74DA] focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+            Get Your Blueprint
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero with full-width background video -->
+    <main id="main" class="relative">
+      <section class="relative">
+        <!-- Background video -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <video
+            class="h-full w-full object-cover"
+            src="/public/hero/loop.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"
+          ></video>
+          <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+        </div>
+
+        <!-- Overlay content -->
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="min-h-[70vh] flex items-center justify-center py-24 md:py-32 lg:py-48">
+            <div class="w-full max-w-3xl text-center">
+              <h1 class="text-5xl font-semibold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
+                Stop Wasting Time on Repetitive Tasks.
+              </h1>
+              <p class="mt-6 text-xl leading-relaxed text-white/90 md:mt-8 md:text-2xl">
+                Sorta Systems builds automated workflows for busy professionals in the UK. We handle client intake, scheduling, and administrative tasks, so you can focus on the work you love.
+              </p>
+              <div class="mt-8 md:mt-10" id="blueprint">
+                <a
+                  href="https://forms.gle/o2ocHc5vQdSN6zUu9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center rounded-md bg-[#0A74DA] px-8 py-4 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-[#085CB0] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0A74DA] focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+                >
+                  Get Your Free Automation Blueprint
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Technology Trust Bar -->
+      <section class="w-full" style="background-color: #F7F7F7 !important; min-height: 200px;">
+        <div class="mx-auto max-w-7xl px-6 py-16 text-center">
+          <h2 class="text-3xl font-medium tracking-tight text-[#2C3E50] mb-12">Technologies We Use</h2>
+          <div class="mx-auto flex max-w-7xl items-center justify-center space-x-16 md:space-x-24">
+            <div class="flex items-center justify-center h-48 w-56">
+              <img src="/public/logos/n8n.png" alt="n8n" class="max-h-32 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
+            <div class="flex items-center justify-center h-48 w-56">
+              <img src="/public/logos/google.png" alt="Google" class="max-h-32 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
+            <div class="flex items-center justify-center h-48 w-56">
+              <img src="/public/logos/docker.png" alt="Docker" class="max-h-32 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
+            <div class="flex items-center justify-center h-48 w-56">
+              <img src="/public/logos/stripe.png" alt="Stripe" class="max-h-32 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
+            <div class="flex items-center justify-center h-48 w-56">
+              <img src="/public/logos/cloudflare.png" alt="Cloudflare" class="max-h-32 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer: Our Mission -->
+      <footer class="border-t border-black/5 bg-[#2C3E50] text-white relative overflow-hidden">
+        <!-- Background Icon Watermark -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+          <img src="/public/logo.svg" alt="" class="w-96 h-96 opacity-30" />
+        </div>
+        
+        <div class="mx-auto max-w-4xl px-6 py-16 text-center md:py-20 relative z-10">
+          <h2 class="text-3xl font-semibold tracking-tight">Our Mission</h2>
+          
+          <!-- Blue Separator Line -->
+          <div class="w-24 h-0.5 bg-[#0A74DA] mx-auto mt-4 mb-8"></div>
+          
+          <!-- Core Belief Statement -->
+          <blockquote class="text-xl font-medium text-white mb-6 italic">
+            "Sorta Systems was founded on a simple premise: small business owners should be focused on their passion, not the endless administrative tasks that come with it."
+          </blockquote>
+          
+          <!-- Supporting Description -->
+          <p class="text-lg leading-relaxed text-white/90">
+            We are a Colchester-based firm that designs and implements the robust automated systems that bring order, efficiency, and professionalism to your operations.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+  </body>
+  </html>
+
