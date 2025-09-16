@@ -458,15 +458,17 @@
                 data.referrer = document.referrer;
                 data.timestamp = Date.now();
                 
-                // Add IP address (will be captured by your n8n webhook)
-                data.clientIP = 'will-be-captured-by-webhook';
+                // IP address will be captured by n8n webhook from request headers
                 
-                // n8n webhook URL
+                // n8n webhook URL (production)
                 const webhookUrl = 'https://n8n.secur3-et.co.uk/webhook/sortasystems-forms';
                 
                 // Send to n8n webhook with timeout
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+                
+                console.log('🚀 Sending POST request to webhook...');
+                console.log('📊 Data being sent:', data);
                 
                 const response = await fetch(webhookUrl, {
                     method: 'POST',
@@ -476,6 +478,10 @@
                     body: JSON.stringify(data),
                     signal: controller.signal
                 });
+                
+                console.log('✅ POST request completed!');
+                console.log('📈 Response status:', response.status);
+                console.log('📋 Response headers:', Object.fromEntries(response.headers.entries()));
                 
                 clearTimeout(timeoutId);
                 
