@@ -1,0 +1,65 @@
+<form id="discovery-form">
+    <h2>Section 1: About Your Business</h2>
+    <p>Let's begin with a high-level overview of your business.</p>
+    
+    <label for="businessName">What is your business name and current website URL?</label>
+    <input type="text" id="businessName" name="businessName" required>
+    
+    <label for="businessDescription">Briefly describe what your business does and who your ideal customers are.</label>
+    <textarea id="businessDescription" name="businessDescription" rows="4" required></textarea>
+    
+    <h2>Section 2: Your Digital Presence</h2>
+    <p>This helps us understand your current marketing and website effectiveness.</p>
+    
+    <label>What is the primary goal of your website?</label>
+    <select id="websiteGoal" name="websiteGoal">
+        <option value="generate_leads">Generate new leads or customer inquiries</option>
+        <option value="provide_information">Provide information about my services</option>
+        <option value="showcase_portfolio">Showcase my portfolio and past work</option>
+        <option value="build_credibility">Build credibility and trust for my brand</option>
+        <option value="sell_products">Sell products directly (e-commerce)</option>
+        <option value="other">Other</option>
+    </select>
+    
+    <label for="websiteEffectiveness">On a scale of 1-10, how would you rate your website's effectiveness in attracting new customers?</label>
+    <input type="number" id="websiteEffectiveness" name="websiteEffectiveness" min="1" max="10" required>
+    
+    <label for="onlineChannels">Beyond your website, what are the most important online channels for your business? (e.g., Facebook, Instagram, TrustATrader, Google)</label>
+    <input type="text" id="onlineChannels" name="onlineChannels">
+
+    <h2>Section 3: Your Business Operations</h2>
+    <p>This helps us identify opportunities for automation.</p>
+
+    <label for="timeConsumingTask">Outside of your core work, what is the single most time-consuming, repetitive administrative task you do?</label>
+    <textarea id="timeConsumingTask" name="timeConsumingTask" rows="4"></textarea>
+
+    <label>Which of these administrative areas causes the most frustration? (Check all that apply)</label>
+    <div>
+        <input type="checkbox" id="frustration_inquiries" name="frustrations" value="managing_inquiries">
+        <label for="frustration_inquiries">Managing inquiries from different channels (email, social media, etc.)</label>
+    </div>
+    <div>
+        <input type="checkbox" id="frustration_quotes" name="frustrations" value="sending_quotes">
+        <label for="frustration_quotes">Sending quotes and proposals</label>
+    </div>
+    <div>
+        <input type="checkbox" id="frustration_followups" name="frustrations" value="following_up">
+        <label for="frustration_followups">Following up with potential clients</label>
+    </div>
+    <div>
+        <input type="checkbox" id="frustration_onboarding" name="frustrations" value="onboarding_clients">
+        <label for="frustration_onboarding">Onboarding new clients (contracts, invoices, welcome info)</label>
+    </div>
+    <div>
+        <input type="checkbox" id="frustration_reviews" name="frustrations" value="requesting_reviews">
+        <label for="frustration_reviews">Requesting reviews after a job is done</label>
+    </div>
+
+    <h2>Section 4: Your Goals</h2>
+    <p>This helps us understand what a successful outcome looks like for you.</p>
+
+    <label for="successfulOutcome">If we were to work together, what would a successful outcome look like for your business in the next six months?</label>
+    <textarea id="successfulOutcome" name="successfulOutcome" rows="4"></textarea>
+
+    <button type="submit">Submit Your Blueprint Request</button>
+</form>

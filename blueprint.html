@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Free Blueprint - Sorta Systems</title>
+    <link rel="icon" type="image/png" href="/public/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
+        <div class="mx-auto max-w-7xl px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="/public/logo.svg" alt="Sorta Systems" class="h-8 w-auto" />
+                </div>
+                <a href="/" class="inline-flex items-center justify-center rounded-md bg-[#0A74DA] px-6 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#085CB0] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0A74DA] focus-visible:ring-offset-2">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-16 bg-[#2C3E50]">
+            <div class="mx-auto max-w-4xl px-6 text-center">
+                <h1 class="text-4xl font-bold text-white mb-6 md:text-5xl">
+                    Get Your Free Business Blueprint
+                </h1>
+                <p class="text-xl text-white/90 mb-8 md:text-2xl">
+                    Tell us about your business and we'll create a custom automation plan tailored to your needs.
+                </p>
+                <div class="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+                    <svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-white font-medium">Takes 5-10 minutes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="py-8 md:py-16" style="background-color: #F9FAFB !important;">
+            <div class="mx-auto max-w-4xl px-4 md:px-6">
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" class="hidden bg-green-50 border border-green-200 rounded-xl p-8 mb-8 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-green-800 mb-2">Thank You!</h2>
+                    <p class="text-green-700">We've received your information and will send your custom blueprint within 3-5 business days.</p>
+                </div>
+
+                <!-- Form -->
+                <form id="discovery-form" class="bg-white rounded-2xl shadow-lg p-4 md:p-8 lg:p-12">
+                    <!-- Section 1: About Your Business -->
+                    <div class="mb-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center mb-6">
+                            <div class="w-10 h-10 bg-[#0A74DA] rounded-full flex items-center justify-center mr-4 mb-2 sm:mb-0">
+                                <span class="text-white font-bold text-lg">1</span>
+                            </div>
+                            <h2 class="text-xl md:text-2xl font-bold text-[#2C3E50]">About Your Business</h2>
+                        </div>
+                        <p class="text-[#2C3E50]/80 mb-8 text-lg">Let's begin with a high-level overview of your business.</p>
+                        
+                        <div class="space-y-6">
+                    <div>
+                        <label for="businessName" class="block text-lg font-semibold text-[#2C3E50] mb-3">What is your business name? <span class="text-red-500">*</span></label>
+                        <input type="text" id="businessName" name="businessName" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg">
+                    </div>
+                    
+                    <div>
+                        <label for="websiteUrl" class="block text-lg font-semibold text-[#2C3E50] mb-3">What is your current website URL? <span class="text-red-500">*</span></label>
+                        <input type="url" id="websiteUrl" name="websiteUrl" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg"
+                               placeholder="https://yourwebsite.com">
+                    </div>
+                            
+                            <div>
+                                <label for="businessDescription" class="block text-lg font-semibold text-[#2C3E50] mb-3">Briefly describe what your business does and who your ideal customers are. <span class="text-red-500">*</span></label>
+                                <textarea id="businessDescription" name="businessDescription" rows="4" required
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg resize-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Your Digital Presence -->
+                    <div class="mb-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center mb-6">
+                            <div class="w-10 h-10 bg-[#0A74DA] rounded-full flex items-center justify-center mr-4 mb-2 sm:mb-0">
+                                <span class="text-white font-bold text-lg">2</span>
+                            </div>
+                            <h2 class="text-xl md:text-2xl font-bold text-[#2C3E50]">Your Digital Presence</h2>
+                        </div>
+                        <p class="text-[#2C3E50]/80 mb-8 text-lg">This helps us understand your current marketing and website effectiveness.</p>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label for="websiteGoal" class="block text-lg font-semibold text-[#2C3E50] mb-3">What is the primary goal of your website? <span class="text-red-500">*</span></label>
+                                <select id="websiteGoal" name="websiteGoal" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg">
+                                    <option value="">Select your primary goal</option>
+                                    <option value="generate_leads">Generate new leads or customer inquiries</option>
+                                    <option value="provide_information">Provide information about my services</option>
+                                    <option value="showcase_portfolio">Showcase my portfolio and past work</option>
+                                    <option value="build_credibility">Build credibility and trust for my brand</option>
+                                    <option value="sell_products">Sell products directly (e-commerce)</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Other Website Goal Input (Hidden by default) -->
+                            <div id="websiteGoalOther" class="hidden">
+                                <label for="websiteGoalOtherText" class="block text-lg font-semibold text-[#2C3E50] mb-3">Please specify your website goal <span class="text-red-500">*</span></label>
+                                <input type="text" id="websiteGoalOtherText" name="websiteGoalOtherText"
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg">
+                            </div>
+                            
+                            <div>
+                                <label for="websiteEffectiveness" class="block text-lg font-semibold text-[#2C3E50] mb-3">On a scale of 1-10, how would you rate your website's effectiveness in attracting new customers? <span class="text-red-500">*</span></label>
+                                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                                    <span class="text-sm text-[#2C3E50]/60 order-2 sm:order-1">1 (Not effective)</span>
+                                    <input type="range" id="websiteEffectiveness" name="websiteEffectiveness" min="1" max="10" value="5" required
+                                           class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider order-1 sm:order-2">
+                                    <span class="text-sm text-[#2C3E50]/60 order-3">10 (Very effective)</span>
+                                    <span id="effectiveness-value" class="text-lg font-bold text-[#0A74DA] min-w-[2rem] text-center order-4">5</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="onlineChannels" class="block text-lg font-semibold text-[#2C3E50] mb-3">Beyond your website, what are the most important online channels for your business? (e.g., Facebook, Instagram, TrustATrader, Google)</label>
+                                <input type="text" id="onlineChannels" name="onlineChannels"
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg"
+                                       placeholder="e.g., Facebook, Instagram, TrustATrader, Google">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Your Business Operations -->
+                    <div class="mb-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center mb-6">
+                            <div class="w-10 h-10 bg-[#0A74DA] rounded-full flex items-center justify-center mr-4 mb-2 sm:mb-0">
+                                <span class="text-white font-bold text-lg">3</span>
+                            </div>
+                            <h2 class="text-xl md:text-2xl font-bold text-[#2C3E50]">Your Business Operations</h2>
+                        </div>
+                        <p class="text-[#2C3E50]/80 mb-8 text-lg">This helps us identify opportunities for automation.</p>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label for="timeConsumingTask" class="block text-lg font-semibold text-[#2C3E50] mb-3">Outside of your core work, what is the single most time-consuming, repetitive administrative task you do?</label>
+                                <textarea id="timeConsumingTask" name="timeConsumingTask" rows="4"
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg resize-none"
+                                          placeholder="e.g., manually entering quotes, following up with leads, creating invoices..."></textarea>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-lg font-semibold text-[#2C3E50] mb-4">Which of these administrative areas causes the most frustration? (Check all that apply)</label>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="frustration_inquiries" name="frustrations" value="managing_inquiries"
+                                               class="mt-1 w-5 h-5 text-[#0A74DA] border-gray-300 rounded focus:ring-[#0A74DA]">
+                                        <label for="frustration_inquiries" class="ml-3 text-lg text-[#2C3E50]/80">Managing inquiries from different channels (email, social media, etc.)</label>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="frustration_quotes" name="frustrations" value="sending_quotes"
+                                               class="mt-1 w-5 h-5 text-[#0A74DA] border-gray-300 rounded focus:ring-[#0A74DA]">
+                                        <label for="frustration_quotes" class="ml-3 text-lg text-[#2C3E50]/80">Sending quotes and proposals</label>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="frustration_followups" name="frustrations" value="following_up"
+                                               class="mt-1 w-5 h-5 text-[#0A74DA] border-gray-300 rounded focus:ring-[#0A74DA]">
+                                        <label for="frustration_followups" class="ml-3 text-lg text-[#2C3E50]/80">Following up with potential clients</label>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="frustration_onboarding" name="frustrations" value="onboarding_clients"
+                                               class="mt-1 w-5 h-5 text-[#0A74DA] border-gray-300 rounded focus:ring-[#0A74DA]">
+                                        <label for="frustration_onboarding" class="ml-3 text-lg text-[#2C3E50]/80">Onboarding new clients (contracts, invoices, welcome info)</label>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="frustration_reviews" name="frustrations" value="requesting_reviews"
+                                               class="mt-1 w-5 h-5 text-[#0A74DA] border-gray-300 rounded focus:ring-[#0A74DA]">
+                                        <label for="frustration_reviews" class="ml-3 text-lg text-[#2C3E50]/80">Requesting reviews after a job is done</label>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="frustration_other" name="frustrations" value="other"
+                                               class="mt-1 w-5 h-5 text-[#0A74DA] border-gray-300 rounded focus:ring-[#0A74DA]">
+                                        <label for="frustration_other" class="ml-3 text-lg text-[#2C3E50]/80">Other</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Other Frustrations Input (Hidden by default) -->
+                                <div id="frustrationOther" class="hidden mt-4">
+                                    <label for="frustrationOtherText" class="block text-lg font-semibold text-[#2C3E50] mb-3">Please specify what other administrative area causes frustration</label>
+                                    <input type="text" id="frustrationOtherText" name="frustrationOtherText"
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Your Goals -->
+                    <div class="mb-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center mb-6">
+                            <div class="w-10 h-10 bg-[#0A74DA] rounded-full flex items-center justify-center mr-4 mb-2 sm:mb-0">
+                                <span class="text-white font-bold text-lg">4</span>
+                            </div>
+                            <h2 class="text-xl md:text-2xl font-bold text-[#2C3E50]">Your Goals</h2>
+                        </div>
+                        <p class="text-[#2C3E50]/80 mb-8 text-lg">This helps us understand what a successful outcome looks like for you.</p>
+                        
+                        <div>
+                            <label for="successfulOutcome" class="block text-lg font-semibold text-[#2C3E50] mb-3">If we were to work together, what would a successful outcome look like for your business in the next six months? <span class="text-red-500">*</span></label>
+                            <textarea id="successfulOutcome" name="successfulOutcome" rows="4" required
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A74DA] focus:border-transparent transition-all duration-200 text-lg resize-none"
+                                      placeholder="e.g., Save 10 hours per week, increase lead conversion by 30%, automate invoice generation..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="button" id="submit-btn" 
+                                class="inline-flex items-center justify-center rounded-md bg-[#0A74DA] px-8 py-4 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-[#085CB0] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0A74DA] focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                            <span id="submit-text">Get My Free Blueprint</span>
+                            <svg id="submit-spinner" class="hidden animate-spin ml-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </button>
+                        <p class="mt-4 text-sm text-[#2C3E50]/60">We'll send your custom blueprint within 3-5 business days</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-black/5 bg-[#2C3E50] text-white relative overflow-hidden">
+        <!-- Background Icon Watermark -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+            <img src="/public/logo.svg" alt="" class="w-96 h-96 opacity-30" />
+        </div>
+        
+        <div class="mx-auto max-w-4xl px-6 py-16 text-center md:py-20 relative z-10">
+            <h2 class="text-3xl font-semibold tracking-tight">Our Mission</h2>
+            
+            <!-- Blue Separator Line -->
+            <div class="w-24 h-0.5 bg-[#0A74DA] mx-auto mt-4 mb-8"></div>
+            
+            <!-- Core Belief Statement -->
+            <blockquote class="text-xl font-medium text-white mb-6 italic">
+                "Sorta Systems was founded on a simple premise: small business owners should be focused on their passion, not the endless administrative tasks that come with it."
+            </blockquote>
+            
+            <!-- Supporting Description -->
+            <p class="text-lg leading-relaxed text-white/90">
+                We are a Colchester-based firm that designs and implements the robust automated systems that bring order, efficiency, and professionalism to your operations.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Range slider functionality
+        const effectivenessSlider = document.getElementById('websiteEffectiveness');
+        const effectivenessValue = document.getElementById('effectiveness-value');
+        
+        effectivenessSlider.addEventListener('input', function() {
+            effectivenessValue.textContent = this.value;
+        });
+
+        // Direct button click handler (reCAPTCHA removed)
+        document.getElementById('submit-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Enhanced validation
+            const validationErrors = validateForm();
+            if (validationErrors.length > 0) {
+                alert('Please fix the following errors:\n\n• ' + validationErrors.join('\n• '));
+                return;
+            }
+            
+            submitForm(); // Call submitForm directly
+        });
+
+        // Conditional inputs functionality
+        const websiteGoalSelect = document.getElementById('websiteGoal');
+        const websiteGoalOtherDiv = document.getElementById('websiteGoalOther');
+        const websiteGoalOtherText = document.getElementById('websiteGoalOtherText');
+
+        const frustrationOtherCheckbox = document.getElementById('frustration_other');
+        const frustrationOtherDiv = document.getElementById('frustrationOther');
+        const frustrationOtherText = document.getElementById('frustrationOtherText');
+
+        // Handle website goal "Other" selection
+        websiteGoalSelect.addEventListener('change', function() {
+            if (this.value === 'other') {
+                websiteGoalOtherDiv.classList.remove('hidden');
+                websiteGoalOtherText.required = true;
+            } else {
+                websiteGoalOtherDiv.classList.add('hidden');
+                websiteGoalOtherText.required = false;
+                websiteGoalOtherText.value = '';
+            }
+        });
+
+        // Handle frustrations "Other" checkbox
+        frustrationOtherCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                frustrationOtherDiv.classList.remove('hidden');
+                frustrationOtherText.required = true;
+            } else {
+                frustrationOtherDiv.classList.add('hidden');
+                frustrationOtherText.required = false;
+                frustrationOtherText.value = '';
+            }
+        });
+
+        // Enhanced form validation
+        function validateForm() {
+            const errors = [];
+            
+            // Required field validation
+            const requiredFields = [
+                { id: 'businessName', name: 'Business Name and Website' },
+                { id: 'businessDescription', name: 'Business Description' },
+                { id: 'websiteGoal', name: 'Website Goal' },
+                { id: 'websiteEffectiveness', name: 'Website Effectiveness Rating' },
+                { id: 'successfulOutcome', name: 'Successful Outcome' }
+            ];
+            
+            requiredFields.forEach(field => {
+                const element = document.getElementById(field.id);
+                if (!element || !element.value.trim()) {
+                    errors.push(`${field.name} is required`);
+                }
+            });
+            
+            // Conditional field validation
+            if (document.getElementById('websiteGoal').value === 'other') {
+                const otherText = document.getElementById('websiteGoalOtherText');
+                if (!otherText || !otherText.value.trim()) {
+                    errors.push('Please specify your website goal');
+                }
+            }
+            
+            // Frustrations validation
+            const frustrationCheckboxes = document.querySelectorAll('input[name="frustrations"]:checked');
+            if (frustrationCheckboxes.length === 0) {
+                errors.push('Please select at least one administrative area');
+            }
+            
+            // Check if "Other" frustration is selected but not filled
+            const otherFrustrationChecked = document.getElementById('frustration_other').checked;
+            if (otherFrustrationChecked) {
+                const otherText = document.getElementById('frustrationOtherText');
+                if (!otherText || !otherText.value.trim()) {
+                    errors.push('Please specify what other administrative area causes frustration');
+                }
+            }
+            
+            // Input sanitization and length validation
+            const businessName = document.getElementById('businessName').value.trim();
+            if (businessName.length < 3 || businessName.length > 200) {
+                errors.push('Business name must be between 3 and 200 characters');
+            }
+            
+            const businessDescription = document.getElementById('businessDescription').value.trim();
+            if (businessDescription.length < 10 || businessDescription.length > 1000) {
+                errors.push('Business description must be between 10 and 1000 characters');
+            }
+            
+            const successfulOutcome = document.getElementById('successfulOutcome').value.trim();
+            if (successfulOutcome.length < 10 || successfulOutcome.length > 500) {
+                errors.push('Successful outcome must be between 10 and 500 characters');
+            }
+            
+            // Email validation if provided
+            const businessNameLower = businessName.toLowerCase();
+            if (businessNameLower.includes('@') && !businessNameLower.includes('http')) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(businessName)) {
+                    errors.push('Please provide a valid website URL or email address');
+                }
+            }
+            
+            return errors;
+        }
+        
+        // Form submission function
+        async function submitForm() {
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitSpinner = document.getElementById('submit-spinner');
+            const form = document.getElementById('discovery-form');
+            const successMessage = document.getElementById('success-message');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitText.textContent = 'Creating Your Blueprint...';
+            submitSpinner.classList.remove('hidden');
+            
+            try {
+                // Gather form data
+                const formData = new FormData(form);
+                const data = {};
+                
+                // Convert FormData to object with proper handling
+                for (let [key, value] of formData.entries()) {
+                    if (data[key]) {
+                        // Handle multiple values (checkboxes)
+                        if (Array.isArray(data[key])) {
+                            data[key].push(value);
+                        } else {
+                            data[key] = [data[key], value];
+                        }
+                    } else {
+                        data[key] = value;
+                    }
+                }
+                
+                // Handle special cases for conditional inputs
+                if (data.websiteGoal === 'other' && data.websiteGoalOtherText) {
+                    data.websiteGoal = data.websiteGoalOtherText;
+                    delete data.websiteGoalOtherText;
+                }
+                
+                if (data.frustrations && data.frustrations.includes('other') && data.frustrationOtherText) {
+                    // Replace 'other' with the actual text
+                    const index = data.frustrations.indexOf('other');
+                    data.frustrations[index] = data.frustrationOtherText;
+                    delete data.frustrationOtherText;
+                }
+                
+                // Ensure frustrations is always an array
+                if (!data.frustrations) {
+                    data.frustrations = [];
+                } else if (!Array.isArray(data.frustrations)) {
+                    data.frustrations = [data.frustrations];
+                }
+                
+                // Add timestamp, metadata, and security data
+                data.submissionDate = new Date().toISOString();
+                data.formVersion = '1.0';
+                data.recaptchaToken = 'no-token'; // reCAPTCHA removed
+                data.userAgent = navigator.userAgent;
+                data.referrer = document.referrer;
+                data.timestamp = Date.now();
+                
+                // Add IP address (will be captured by your n8n webhook)
+                data.clientIP = 'will-be-captured-by-webhook';
+                
+                // n8n webhook URL
+                const webhookUrl = 'https://n8n.secur3-et.co.uk/webhook/sortasystems-forms';
+                
+                // Send to n8n webhook with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+                
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (response.ok) {
+                    // Show success message
+                    form.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Clear form data for security
+                    form.reset();
+                } else {
+                    throw new Error(`Server responded with status: ${response.status}`);
+                }
+                
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                console.error('Error details:', error.message);
+                
+                if (error.name === 'AbortError') {
+                    alert('Request timed out. Please check your connection and try again.');
+                } else if (error.message.includes('CORS') || error.message.includes('fetch')) {
+                    alert('CORS Error: Please check your n8n webhook CORS configuration. For now, the form data has been logged to the console for testing.');
+                    console.log('Form data that would have been sent:', data);
+                } else {
+                    alert('There was an error submitting your form. Please try again or contact us directly.');
+                }
+                
+                // Reset button state
+                submitBtn.disabled = false;
+                submitText.textContent = 'Get My Free Blueprint';
+                submitSpinner.classList.add('hidden');
+            }
+        }
+    </script>
+
+    <!-- Custom styles for range slider -->
+    <style>
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #e5e7eb;
+            outline: none;
+            border-radius: 8px;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #0A74DA;
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #0A74DA;
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</body>
+</html>
