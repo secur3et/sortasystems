@@ -1,0 +1,17 @@
+# Cursor AI rules (local development only)
+.cursorrules
+
+# Python local server
+__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+
