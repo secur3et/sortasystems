@@ -1,0 +1,28 @@
+# Cache control for Cloudflare Pages
+
+# HTML files - always revalidate (check for updates)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# JavaScript and CSS - cache for 1 hour, then revalidate
+/public/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/public/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Images and static assets - cache for 1 week
+/public/logos/*
+  Cache-Control: public, max-age=604800, immutable
+
+/public/hero/*
+  Cache-Control: public, max-age=604800, immutable
+
+# SVG and other assets
+/public/*.svg
+  Cache-Control: public, max-age=604800, immutable
+
+/public/*.png
+  Cache-Control: public, max-age=604800, immutable
+
+
